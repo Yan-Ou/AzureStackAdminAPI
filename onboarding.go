@@ -46,8 +46,8 @@ func addNewGuestDirectory(token AdminApiToken, guestTenantDirectory string, gues
 }
 
 func onBoardHandler(w http.ResponseWriter, r *http.Request) {
-	guestTenantID := r.FormValue("guestTenantId")               // f71f054e-ebf4-4526-8678-4d85999db2ab
-	guestTenantDirectory := r.FormValue("guestTenantDirectory") // azurestacktestmax.onmicrosoft.com
+	guestTenantID := r.FormValue("guestTenantId")               
+	guestTenantDirectory := r.FormValue("guestTenantDirectory") 
 
 	if guestTenantID == "" || guestTenantDirectory == "" {
 		http.Error(w, "Missing paramerts", 500)
